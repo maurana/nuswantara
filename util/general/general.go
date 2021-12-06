@@ -1,0 +1,5 @@
+package general
+
+func general() {
+
+}
