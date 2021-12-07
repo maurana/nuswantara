@@ -5,7 +5,7 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/go-chi/cors"
 	"github.com/go-chi/httprate"
-	"github.com/maurana/nuswantara/core/config""
+	"github.com/maurana/nuswantara/core/config"
     "github.com/maurana/nuswantara/core/security/jwt"
 	chimiddleware "github.com/go-chi/chi/middleware"
 )
