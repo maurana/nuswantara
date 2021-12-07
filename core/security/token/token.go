@@ -2,7 +2,7 @@ package token
 
 import (
 	"time"
-    "github.com/maurana/nuswantara/core/config"
+        "github.com/maurana/nuswantara/core/config"
 	jwt "github.com/dgrijalva/jwt-go"
 )
 
