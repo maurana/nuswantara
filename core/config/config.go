@@ -17,6 +17,9 @@ type Config struct {
 
 	PaginationLimit int
 
+	MongoConnection		 string
+	MongoDatabase		 string
+
 	MysqlUser            string
 	MysqlPassword        string
 	MysqlHost            string
@@ -46,6 +49,8 @@ func load() Config {
 		JwtSecretKey:         vp.GetString("jwt.secret.key"),
 		JwtTTL:               vp.GetDuration("jwt.ttl"),
 		PaginationLimit:      vp.GetInt("pagination.limit"),
+		MongoConnection		  vp.GetString("mongo.connection"),
+		MongoDatabase		  vp.GetString("mongo.database"),
 		MysqlUser:            vp.GetString("mysql.user"),
 		MysqlPassword:        vp.GetString("mysql.password"),
 		MysqlHost:            vp.GetString("mysql.host"),
