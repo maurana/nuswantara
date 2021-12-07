@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
-    "github.com/maurana/nuswantara/core/config"
+        "github.com/maurana/nuswantara/core/config"
 	"github.com/maurana/nuswantara/core/constant"
 	"github.com/maurana/nuswantara/util/res"
 	jwt "github.com/dgrijalva/jwt-go"
