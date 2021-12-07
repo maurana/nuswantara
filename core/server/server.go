@@ -10,7 +10,7 @@ import (
 
   	"github.com/maurana/nuswantara/core/config"
 	"github.com/maurana/nuswantara/core/routes"
-	"github.com/maurana/nuswantara/core/logger"
+	"github.com/maurana/nuswantara/core/log"
 )
 
 func Startup() error {
@@ -31,11 +31,11 @@ func Startup() error {
   
 		  err := httpServer.Shutdown(context.Background())
 		  if err != nil {
-			  logger.Log().Err(err).Msg("failed to shutdown server")
+			  log.Log().Err(err).Msg("failed to shutdown server")
 		  }
 	  }()
   
-	  logger.Log().Info().Msgf("starting server on port%s", httpServer.Addr)
+	  log.Log().Info().Msgf("starting server on port%s", httpServer.Addr)
 	  err := httpServer.ListenAndServe()
 	  if err != nil && err != http.ErrServerClosed {
 		  return err
@@ -43,6 +43,6 @@ func Startup() error {
   
 	  <-idleConnsClosed
   
-	  logger.Log().Info().Msg("stopped server gracefully")
+	  log.Log().Info().Msg("stopped server gracefully")
 	  return nil
   }
